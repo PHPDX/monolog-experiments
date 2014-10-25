@@ -1,5 +1,7 @@
 {
-    "name": "root/monolog-scratch",
+    "name": "phpdx/monolog-experiments",
+    "description": "monolog experiments",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Will Vaughn",
@@ -14,6 +16,7 @@
     "require": {
         "monolog/monolog": "~1",
         "nackjicholson/file-parser": "~2",
-        "nackjicholson/monolog-gitter-im": "dev-master"
+        "nackjicholson/monolog-gitter-im": "dev-master",
+        "nackjicholson/monolog-tail-buffer": "dev-master"
     }
 }
