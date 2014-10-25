@@ -12,6 +12,8 @@
         }
     },
     "require": {
-        "monolog/monolog": "~1"
+        "monolog/monolog": "~1",
+        "nackjicholson/file-parser": "~2",
+        "nackjicholson/monolog-gitter-im": "dev-master"
     }
 }

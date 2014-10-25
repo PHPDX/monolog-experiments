@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ab249c0710731c928ae342079ee54ab1",
+    "hash": "3b347df6e05a2edd03fa6c970635f514",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -79,6 +79,86 @@
             "time": "2014-09-30 13:30:58"
         },
         {
+            "name": "nackjicholson/file-parser",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nackjicholson/file-parser.git",
+                "reference": "b0ba7359fc5e3790199582f4888466071feccf3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nackjicholson/file-parser/zipball/b0ba7359fc5e3790199582f4888466071feccf3b",
+                "reference": "b0ba7359fc5e3790199582f4888466071feccf3b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/yaml": "~2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nack\\FileParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Vaughn",
+                    "email": "willieviseoae@gmail.com"
+                }
+            ],
+            "description": "PHP package for parsing data contained in a file into a php array.",
+            "time": "2014-10-11 17:01:52"
+        },
+        {
+            "name": "nackjicholson/monolog-gitter-im",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nackjicholson/monolog-gitter-im.git",
+                "reference": "868b47aec37199f989d199ac48c4e633cd940c6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nackjicholson/monolog-gitter-im/zipball/868b47aec37199f989d199ac48c4e633cd940c6b",
+                "reference": "868b47aec37199f989d199ac48c4e633cd940c6b",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "~1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nack\\Monolog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Vaughn",
+                    "email": "willieviseoae@gmail.com"
+                }
+            ],
+            "description": "Sends monolog notifications through the gitter.im api to a targeted gitter chat room.",
+            "time": "2014-10-25 18:26:48"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -115,12 +195,61 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.5.6",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
+                "reference": "2d9f527449cabfa8543dd7fa3a466d6ae83d6726",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-10-01 05:50:18"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nackjicholson/monolog-gitter-im": 20
+    },
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []
