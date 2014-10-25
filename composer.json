@@ -1,0 +1,17 @@
+{
+    "name": "root/monolog-scratch",
+    "authors": [
+        {
+            "name": "Will Vaughn",
+            "email": "willieviseoae@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PhPdx\\Monolog\\": "src/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "~1"
+    }
+}

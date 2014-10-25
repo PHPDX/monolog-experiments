@@ -1,0 +1,11 @@
+# PHP Storm IDE
+.DS_Store
+.idea
+
+# Composer
+composer.phar
+vendor/
+
+config.json
+scratch/
+multiple.streams.log
