@@ -19,5 +19,5 @@ $logger->pushHandler($tailBufferHandler);
 $logger->debug('test.debug ignored.');
 $logger->critical('test.critical in gitter.im', ['context' => 'here']);
 $logger->notice('test.notice');
-$logger->emergency('test.emergency');
+$logger->emergency('test.emergency in gitter.im');
 $logger->error('test.error');
