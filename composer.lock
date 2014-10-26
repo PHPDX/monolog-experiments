@@ -164,12 +164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nackjicholson/monolog-tail-buffer.git",
-                "reference": "ef6c250e45e7d80de8ca196cee85911b4aa54383"
+                "reference": "53bb802bc537394df19060f2f521bef13bb72392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nackjicholson/monolog-tail-buffer/zipball/ef6c250e45e7d80de8ca196cee85911b4aa54383",
-                "reference": "ef6c250e45e7d80de8ca196cee85911b4aa54383",
+                "url": "https://api.github.com/repos/nackjicholson/monolog-tail-buffer/zipball/53bb802bc537394df19060f2f521bef13bb72392",
+                "reference": "53bb802bc537394df19060f2f521bef13bb72392",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 }
             ],
             "description": "Buffers monolog logs in order to provide contextual information about the events which led to a CRITICAL log.",
-            "time": "2014-10-25 22:35:07"
+            "time": "2014-10-25 23:56:54"
         },
         {
             "name": "psr/log",
