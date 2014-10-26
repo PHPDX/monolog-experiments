@@ -22,10 +22,14 @@ for ($i = 0; $i < ($bufferCapacity - 1); $i++) {
     $logger->debug('test.debug');
 }
 
+// This is going to make a message of the critical log +24 debugs.
 $logger->critical('test.critical');
 
 for ($i = 0; $i < 5; $i++) {
     $logger->notice('test.notice');
 }
 
+// This is going to make a message of this emergency, 5 notices, a critical, and 17 debugs.
 $logger->emergency('test.emergency');
+
+// Make sense?
