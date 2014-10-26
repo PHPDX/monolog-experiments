@@ -17,7 +17,6 @@ $tailBufferHandler = new TailBufferHandler($mailHandler, $bufferCapacity, Logger
 $logger = new Logger("will-experiments-buffered.email");
 $logger->pushHandler($tailBufferHandler);
 
-
 $logger->debug('test.debug will not be in emails or buffers');
 
 for ($i = 0; $i < ($bufferCapacity - 1); $i++) {
@@ -39,11 +38,12 @@ $logger->notice('test.notice');
 $logger->error('test.notice');
 
 // =========================== EMAIL #1 ==========================================
-// 1 CRITICAL + 24 NOTICE in an email.
-// DEBUG below the lowest buffered level, ignored.
+// 1 CRITICAL + 24 NOTICE in a single email.
 // ===============================================================================
 
 // =========================== EMAIL #2 ==========================================
 // 1 EMERGENCY + 5 WARNING + 1 CRITICAL + 17 NOTICE in an email
-// INFO below the lowest buffered level, ignored.
 // ===============================================================================
+
+
+// 1 DEBUG, 1 INFO, 1 NOTICE, 1 ERROR not logged.
