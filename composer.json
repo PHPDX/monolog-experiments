@@ -16,7 +16,6 @@
     "require": {
         "monolog/monolog": "~1",
         "nackjicholson/file-parser": "~2",
-        "nackjicholson/monolog-gitter-im": "dev-master",
-        "nackjicholson/monolog-tail-buffer": "dev-master"
+        "nackjicholson/monolog-gitter-im": "dev-master"
     }
 }

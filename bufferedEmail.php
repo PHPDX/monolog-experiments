@@ -1,25 +1,28 @@
 <?php
 
+use Monolog\Handler\FingersCrossedHandler;
 use Monolog\Handler\NativeMailerHandler;
 use Monolog\Logger;
-use Nack\Monolog\Handler\TailBufferHandler;
 
 require 'vendor/autoload.php';
 
-$to = "user@example.com";
+$to = "willieviseoae@gmail.com";
 $subject = "Buffered Email Test";
 $from = "monolog.scratch@example.com";
 
-$bufferCapacity = 25;
+$bufferSize = 25;
+$bubble = true;
+$stopBuffering = false;
+$activationLevel = Logger::CRITICAL;
 $mailHandler = new NativeMailerHandler($to, $subject, $from, Logger::NOTICE);
-$tailBufferHandler = new TailBufferHandler($mailHandler, $bufferCapacity, Logger::NOTICE);
+$fingersCrossed = new FingersCrossedHandler($mailHandler, $activationLevel, $bufferSize, $bubble, $stopBuffering);
 
 $logger = new Logger("will-experiments-buffered.email");
-$logger->pushHandler($tailBufferHandler);
+$logger->pushHandler($fingersCrossed);
 
 $logger->debug('test.debug will not be in emails or buffers');
 
-for ($i = 0; $i < ($bufferCapacity - 1); $i++) {
+for ($i = 0; $i < ($bufferSize - 1); $i++) {
     $logger->notice('test.notice');
 }
 
@@ -33,7 +36,7 @@ $logger->info('test.info will not be in emails or buffers');
 
 $logger->emergency('test.emergency');
 
-// Wont see these next two, they're put in buffer, but never flushed by a CRITICAL+
+// Wont see these next two, they're put in buffer, but no CRITICAL+ log triggers them to be sent.
 $logger->notice('test.notice');
 $logger->error('test.notice');
 
