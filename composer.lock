@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "adab97c6d461092801569ee96dc3c35e",
+    "hash": "0c43b6991d798e627a217746692285ed",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -120,16 +120,16 @@
         },
         {
             "name": "nackjicholson/monolog-gitter-im",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nackjicholson/monolog-gitter-im.git",
-                "reference": "ffa7bd90ee7154356a58f6aaee2984afba7194e5"
+                "reference": "d3ed1d3410a0172ceaf05de31bcbb86461f341b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nackjicholson/monolog-gitter-im/zipball/ffa7bd90ee7154356a58f6aaee2984afba7194e5",
-                "reference": "ffa7bd90ee7154356a58f6aaee2984afba7194e5",
+                "url": "https://api.github.com/repos/nackjicholson/monolog-gitter-im/zipball/d3ed1d3410a0172ceaf05de31bcbb86461f341b6",
+                "reference": "d3ed1d3410a0172ceaf05de31bcbb86461f341b6",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +156,7 @@
                 }
             ],
             "description": "Sends monolog notifications through the gitter.im api to a targeted gitter chat room.",
-            "time": "2014-10-25 20:32:07"
+            "time": "2014-10-29 07:21:37"
         },
         {
             "name": "psr/log",
@@ -247,9 +247,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "nackjicholson/monolog-gitter-im": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []
