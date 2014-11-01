@@ -18,7 +18,7 @@ $mailHandler->setFormatter(new HtmlFormatter());
 $bufferSize = 3;
 $fingersCrossed = new FingersCrossedHandler($mailHandler, Logger::CRITICAL, $bufferSize, true, false);
 
-$logger = new Logger("will-experiments-buffered.email");
+$logger = new Logger("phpdx-experiments-buffered.email");
 $logger->pushHandler($fingersCrossed);
 
 ////////////////// EMAIL 1 ////////////////////////////////////

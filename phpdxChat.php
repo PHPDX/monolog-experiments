@@ -13,7 +13,7 @@ $config = $fileParser->json(__DIR__ . '/config/config.json');
 $gitterHandler = new GitterImHandler($config['gitterToken'], $config['gitterRoomId']);
 $bufferHandler = new BufferHandler($gitterHandler);
 
-$logger = new Logger("will-experiments-phpdx.chat");
+$logger = new Logger("phpdx-experiments-phpdx.chat");
 $logger->pushHandler($bufferHandler);
 
 $logger->debug('test.debug ignored.');

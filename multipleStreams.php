@@ -13,7 +13,7 @@ function traceMe()
     $stdoutHandler = new StreamHandler('php://stdout');
     $errorFileHandler = new StreamHandler(__DIR__ . '/multiple.streams.log', Logger::WARNING);
 
-    $logger = new Logger('will-experiments-multiple.streams');
+    $logger = new Logger('phpdx-experiments-multiple.streams');
     $logger->pushHandler($stdoutHandler);
     $logger->pushHandler($errorFileHandler);
     $logger->pushProcessor(new IntrospectionProcessor());

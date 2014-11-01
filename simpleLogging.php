@@ -5,7 +5,7 @@ use Monolog\Logger;
 require 'vendor/autoload.php';
 
 // Defaults to using the StreamHandler to php://stderr and a LineFormatter.
-$logger = new Monolog\Logger('channel');
+$logger = new Monolog\Logger('phpdx-experiments-simple.logs');
 
 $logger->debug('debug test');
 $logger->addDebug('addDebug test');
