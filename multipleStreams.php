@@ -19,7 +19,7 @@ function traceMe()
     $logger->pushProcessor(new IntrospectionProcessor());
 
     $logger->debug('look context data', ['foo' => 'bar']);
-    $logger->info('you will see this is stdout, but not the file');
+    $logger->info('you will see this in stdout, but not the file');
     $logger->warning('warning goes to stdout and the file');
     $logger->error('error is handled by both handlers as well', ['serious' => 'error']);
 }
