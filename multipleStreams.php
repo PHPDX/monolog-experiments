@@ -3,6 +3,7 @@
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Monolog\Processor\IntrospectionProcessor;
+use Monolog\Processor\MemoryUsageProcessor;
 
 require 'vendor/autoload.php';
 
@@ -12,6 +13,7 @@ function traceMe()
     // So basic
     $stdoutHandler = new StreamHandler('php://stdout');
     $errorFileHandler = new StreamHandler(__DIR__ . '/multiple.streams.log', Logger::WARNING);
+    $errorFileHandler->pushProcessor(new MemoryUsageProcessor());
 
     $logger = new Logger('phpdx-experiments-multiple.streams');
     $logger->pushHandler($stdoutHandler);
